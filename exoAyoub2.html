@@ -11,15 +11,14 @@
 <body>
     <script>
 
-        function getProvider() {
-            var a = "mehdi@gmail.com"
-            var res = a.split("mehdi").join('@gmail.com')
-            return res
+        function getProvider(add) {
+            res= add[0] + add[2]
+            console.log(res)
         }
 
 
-        console.log(getProvider("mehdi@gmail.com"))
-
+        const adress= ["JeanLaPute","gustave","@gmail.com"]
+        getProvider(adress)
     </script>
 </body>
 

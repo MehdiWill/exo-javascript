@@ -11,21 +11,24 @@
 <body>
     <script>
 
-
-        function Pair(array) {
-            for (let i = 0; i < array.length; i++) {
-                if (array[i] % 2 === 0) {
-                    array[i] *= 3   
+        function select(positif) {
+            for (let i = 0; i < positif.length; i++) {
+                if (positif[i] > 0) {
+                    survivant = positif[i]
+                    console.log(survivant)
                 }
                 else {
-                    array.splice(i, 1)
+                    positif.splice(i, 1)
                     i--
                 }
+
             }
-            console.log(array)
+            console.log(positif)
         }
-        const tutu = [1, 3, 4, 8, 5, 7, 4, 5, 4, 9]
-        Pair(tutu)
+
+
+        const number = [0, 1, -1, 5, -5, 10]
+        select(number)
 
     </script>
 </body>
