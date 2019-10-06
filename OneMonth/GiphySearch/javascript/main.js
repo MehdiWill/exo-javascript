@@ -42,19 +42,19 @@ document.querySelector(".js-go").addEventListener('click',function(){
   
   
   function pushToDOM(input) {
-  
+  console.log(input)
     var response = JSON.parse(input);
-  
+  console.log(response)
     var imageUrls = response.data;
   
-    imageUrls.forEach(function(image){
+   // imageUrls.forEach(function(image){
   
-      var src = image.images.fixed_height.url;
-      console.log(src);
+   //   var src = image.images.fixed_height.url;
+   //   console.log(src);
   
-      var container = document.querySelector(".js-container");
-      container.innerHTML += "<img src=\"" + src + "\" class=\"container-image\">";
+   //   var container = document.querySelector(".js-container");
+   //   container.innerHTML += "<img src=\"" + src + "\" class=\"container-image\">";
   
-    });
+   // });
   
   }
