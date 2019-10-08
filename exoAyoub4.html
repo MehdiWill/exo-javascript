@@ -14,34 +14,39 @@
 
         function SansVoyelle(a, b) {
 
+
             for (let i = 0; i < a.length; i++) {
 
 
                 tutu = b.includes(a[i])
-
+              
                 if (tutu !== true) {
-                    toto = a[i]
-                   
-                    console.log(a[i])
+
+                    toto=a[i]
+                    console.log(toto)
+
+                }
+                else {
+                    toto.splice(i, 1)
+                    i--
                 }
 
             }
-
+            console.log(a)
         }
+            const mot = "patatatatefiif"
+            const voyelle = ['a', 'e', 'i', 'o', 'u', 'y']
 
-        const mot = "patatatatefiif"
-        const voyelle = ['a', 'e', 'i', 'o', 'u', 'y']
-
-        SansVoyelle(mot, voyelle)
+            SansVoyelle(mot, voyelle)
 
 
         // while ... includes()  a = a.replace(b[i], "");  toto=b.includes(a[i])
         //a=a.charAt(a[i]) a.includes(b[i])   toto = b.includes(a[i])  toto = b.includes(a[i])
         //                while (toto === true) {
         //}
-        while (toto === true) {
-
-        }
+        //while (toto === true) {
+//
+        //}
     </script>
 
 
