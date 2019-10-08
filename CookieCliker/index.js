@@ -1,26 +1,42 @@
-var score = 0;
+let score = 0;
+
 
 function add(number) {
+    const integer = parseInt(cookies.innerText);
     score= score + number
     document.getElementById("cookies").innerHTML = score
     
-    console.log(score)
 }
+
+
+let bonus= 0
 
 function paid() {
-    if( document.getElementById('text').value > 10){
-    document.getElementById('text').value = score - 11
+
+    const cout= 100
     
+    if( score > cout ){
+    bonus=bonus + 2
+    score = score - cout
+
+    
+    console.log(bonus)
     }
-    else {
-        document.getElementById('text').value = score -1
-        console.log(score)
-    }
+    
     
 
 }
 
-var score = 0;
 
-paid()
-add()
+window.setInterval(function(){
+	
+	add(bonus);
+	
+}, 1000);
+
+
+add(bonus)
+
+
+// const integer = parseInt(suiv.innerText);
+// suiv.innerText = increment + integer;
