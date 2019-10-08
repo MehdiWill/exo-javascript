@@ -1,8 +1,9 @@
+var score = 0;
 
-function add() {
-
-    document.getElementById('text').value = score ++
-    return score
+function add(number) {
+    score= score + number
+    document.getElementById("cookies").innerHTML = score
+    
     console.log(score)
 }
 
