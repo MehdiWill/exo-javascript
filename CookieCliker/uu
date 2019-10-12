@@ -1,0 +1,195 @@
+let score = 0;
+let hp= 15
+
+function add(number) {
+    const integer = parseInt(cookies.innerText);
+    score= score + number
+    hp= hp - number
+
+    document.getElementById("cookies").innerHTML = score
+    document.getElementById("hp").innerHTML = hp
+
+
+    changeImage(hp)
+    
+}
+
+
+let bonus= 0
+
+function paid() {
+
+    const cout= 100
+    
+    if( score > cout ){
+    bonus=bonus + 2
+    score = score - cout
+
+    
+    console.log(bonus)
+    }
+    
+}
+
+const img = document.getElementsByTagName('img')[0]
+
+function changeImage(number) {
+
+    if (score>15) 
+    {
+        img.src= img.src.replace("peste","goblin")
+        let hp = 100
+        hp -= number 
+        
+        document.getElementById("hp").innerHTML = hp
+        console.log(hp)
+        
+    }
+    
+
+    if (score>115) 
+    {
+        img.src= img.src.replace("goblin","ganon")
+    }
+    
+}
+
+
+
+
+window.setInterval(function(){
+	
+	add(bonus);
+	
+}, 1000);
+
+
+add(bonus)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let score = 0;
+let hp= 15
+
+function add(number) {
+    const integer = parseInt(cookies.innerText);
+
+    score= score + number 
+    hp= hp - number
+    console.log(hp)
+    document.getElementById("cookies").innerHTML = score
+    document.getElementById("hp").innerHTML = hp
+
+
+    changeImage(hp)
+    
+    
+}
+
+
+let cout= 10
+
+function paid() {
+
+    if( score > cout ){
+    degat=degat + 1
+
+    score = score - cout
+    document.getElementById("bonus").innerHTML = bonus
+    
+    console.log(bonus)
+    }
+    
+}
+
+function achat(prix) {
+
+    const integer = parseInt(cookies.innerText);
+    if(score = score - prix){
+        hp += number
+    }
+    
+
+    document.getElementById("cookies").innerHTML = score
+    img.src= img.src.replace("mastersword","white")
+    
+    
+    console.log(Hp)
+    
+    changeImage(hp)
+
+}
+
+const img = document.getElementsByTagName('img')[0]
+
+
+function changeImage(number) {
+
+    if (score>15) 
+    {
+        img.src= img.src.replace("peste","goblin")
+        let hp = 100 
+        hp += number
+        document.getElementById("hp").innerHTML = hp
+        
+        
+    }
+    
+
+    if (score>115) 
+    {
+        img.src= img.src.replace("peste","goblin")
+        let hp = 1000
+        hp += number
+        document.getElementById("hp").innerHTML = hp
+        img.src= img.src.replace("goblin","ganon")
+    }
+    
+}
+
+
+let degat= 5
+
+function santer(vitaliter) {
+
+    if( vitaliter =100 ){
+    degat=degat + 1
+
+    vitaliter = vitaliter - degat
+
+    document.getElementById("santer").innerHTML = vitaliter
+    
+    console.log(vitaliter)
+    }
+    
+}
+
+
+
+
+window.setInterval(function(){
+	
+    add(bonus);
+    santer(degat)
+	
+}, 1000);
+
+
+add()
+
+
+// const integer = parseInt(suiv.innerText);
+// suiv.innerText = increment + integer;

@@ -14,20 +14,38 @@ function add(number) {
     
 }
 
+let degat= 5
+
+function santer(vitaliter) {
+
+    if( vitaliter =100 ){
+    degat=degat + 1
+
+    vitaliter = vitaliter - degat
+
+    document.getElementById("santer").innerHTML = vitaliter
+    
+    
+    }
+    
+}
+
 
 let bonus= 0
 
-function paid() {
+let regain=1
 
-    const cout= 100
-    
-    if( score > cout ){
-    bonus=bonus + 2
-    score = score - cout
+function magie(mana) {
 
+
+    if( mana=100){
+        mana=mana - 10
+        document.getElementById("mana").innerHTML = mana - 10
+        console.log(mana)
+        }
     
-    console.log(bonus)
-    }
+    
+    
     
 }
 
@@ -39,27 +57,59 @@ function changeImage(number) {
     {
         img.src= img.src.replace("peste","goblin")
         let hp = 100
-        hp -= number 
+        hp += number 
         
         document.getElementById("hp").innerHTML = hp
-        console.log(hp)
+        
         
     }
     
 
     if (score>115) 
     {
+        img.src= img.src.replace("peste","goblin")
+        let hp = 1000
+        hp += number
+        document.getElementById("hp").innerHTML = hp
         img.src= img.src.replace("goblin","ganon")
     }
     
 }
+
+let prix=100
+
+function achat(number) {
+    
+    
+    if(score = score - prix){
+        const integer = parseInt(hp.innerText);
+        document.getElementById("hp").innerHTML = hp 
+        hp += number
+        console.log(hp)
+    }
+    
+
+    
+    img.src= img.src.replace("mastersword","white")
+    
+    
+    console.log(Hp)
+    
+    changeImage(hp)
+
+}
+
+
+
 
 
 
 
 window.setInterval(function(){
 	
-	add(bonus);
+    add(bonus);
+    santer(degat)
+    
 	
 }, 1000);
 
@@ -67,5 +117,5 @@ window.setInterval(function(){
 add(bonus)
 
 
-// const integer = parseInt(suiv.innerText);
-// suiv.innerText = increment + integer;
+
+
